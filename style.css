@@ -48,12 +48,16 @@ body {
   color: #060F46;
 }
 
+:disabled {
+  color: rgba(48, 51, 107,.9);
+}
+
 .button {
   background: #060F46;
   border: 0;
-  margin-top: 100px;
-  box-shadow: 0 0 0 5px #BBBDCB,
-              0 0 0 10px #D2D3DC;
+  margin-top: 250px;
+  box-shadow: 0 0 0 5px rgba(48, 51, 107,.2),
+              0 0 0 10px rgba(48, 51, 107,.1);
   border-radius: 70px;
   width: 70px;
   height: 70px;
@@ -65,7 +69,34 @@ body {
   cursor: pointer;
 }
 
-.button:hover {
-  box-shadow: 0 0 0 5px #BBBDCB,
-              0 0 0 10px #D2D3DC;
+.animation {
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+       box-shadow: 0 0 0 5px rgba(48, 51, 107,.2), 
+                   0 0 0 10px rgba(48, 51, 107,.2),
+                   0 0 0 15px rgba(48, 51, 107,.2),
+                   0 0 0 20px rgba(48, 51, 107,.2),
+                   0 0 0 25px rgba(48, 51, 107,.2);
+    }
+    50%
+    {
+       box-shadow: 0 0 0 10px rgba(48, 51, 107,.2), 
+                   0 0 0 20px rgba(48, 51, 107,.2),
+                   0 0 0 30px rgba(48, 51, 107,.2),
+                   0 0 0 40px rgba(48, 51, 107,.2),
+                   0 0 0 50px rgba(48, 51, 107,.2);
+    }
+    100%
+    {
+       box-shadow: 0 0 0 5px rgba(48, 51, 107,.2), 
+                   0 0 0 10px rgba(48, 51, 107,.2),
+                   0 0 0 15px rgba(48, 51, 107,.2),
+                   0 0 0 20px rgba(48, 51, 107,.2),
+                   0 0 0 25px rgba(48, 51, 107,.2);
+    }
 }

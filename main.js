@@ -17,6 +17,7 @@ button.addEventListener('click', e => {
   if (!started) { // Started
     started = true;
     button.innerText = "Stop";
+    button.classList = "button animation";
     if (!finished) startInterval(); // Starting interval
     else { // Finished
       console.log('Finished.');
@@ -27,9 +28,9 @@ button.addEventListener('click', e => {
   else { // Stopped
     started = false;
     button.innerText = 'Start';
+    button.classList = "button";
     clearInterval(interval); // Stopping interval
   }
-
   disableElements(); // When timer's started and stopped, it's changing enable status.
 });
 
